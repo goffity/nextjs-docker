@@ -1,6 +1,6 @@
 FROM node:16-alpine AS dependences
-# RUN apk update
-# RUN apk add --no-cache libc6-compat
+RUN apk update
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY yarn.lock .
 COPY package.json .
